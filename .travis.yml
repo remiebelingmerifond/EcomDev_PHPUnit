@@ -3,8 +3,7 @@ php:
   - 5.6
 env:
   matrix:
-    - MAGE=1.9.3.x
-    - MAGE=1.9.4.x
+    - MAGE=1.9.2.4
 cache:
   directories:
     - "$HOME/.composer/cache"
