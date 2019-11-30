@@ -2,7 +2,9 @@ language: php
 php:
   - 5.6
 env:
-  - MAGE=1.9.0.1
+  matrix:
+    - MAGE=1.9.3.x
+    - MAGE=1.9.4.x
 cache:
   directories:
     - "$HOME/.composer/cache"
@@ -14,6 +16,7 @@ before_script:
   - composer install --no-interaction --prefer-dist
   # Installing magento version with prepared DB dump
   - git clone https://github.com/OpenMage/magento-lts.git --depth 1 --branch $MAGE $MAGE_DIR
+  - cp .travis/local.xml $MAGE_DIR/app/etc/
   - mkdir tmp
   - curl -o ./tmp/sample-data.tgz https://raw.githubusercontent.com/Vinai/compressed-magento-sample-data/1.9.1.0/compressed-no-mp3-magento-sample-data-1.9.1.0.tgz
   - tar -xzf ./tmp/sample-data.tgz -C ./tmp/
@@ -34,4 +37,4 @@ before_script:
 script:
   # output php ini info for checking the problem
   - cd $MAGE_DIR
-  - phpunit --colors --coverage-text -d display_errors=1
+  - $TRAVIS_BUILD_DIR/vendor/bin/phpunit --colors --coverage-text -d display_errors=1
