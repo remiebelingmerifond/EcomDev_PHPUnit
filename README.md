@@ -1,3 +1,19 @@
+* Latest Release: [![Master Branch](https://travis-ci.com/Barbazul/EcomDev_PHPUnit.png?branch=master)](https://travis-ci.com/Barbazul/EcomDev_PHPUnit)
+
+Fork purpose and disclaimer
+---------------------------
+
+This fork of the EcomDev original repository was created by Barbazul with the intent of doing some maintenance work 
+necessary for the sole purpose of keeping the tool up to date with current Magento 1 stack for legacy projects. 
+No new features will be worked on or merged from pull requests.
+Pull Requests fixing issues with the tool will likely be merged.
+
+The tool is provided "as is" without any warranty of it actually working and no support will be given. At all.
+You are still free to open issues as someone in the community might join the discussion and answer them if I don't do it
+myself, but in the most likely case I will not be answering any issues. 
+
+<hr />
+
 <a href="http://www.ecomdev.org/services/magento-development?utm_source=github&utm_medium=logo&utm_campaign=github">![EcomDev](http://www.ecomdev.org/wp-content/themes/ecomdev/images/logo.png)</a>
 
 Magento PHPUnit Integration
