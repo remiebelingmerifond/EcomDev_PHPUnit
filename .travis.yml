@@ -13,7 +13,7 @@ before_script:
   # Copying travis composer.json to test only module
   - cp -f .travis/composer.json composer.json
   # Installing dependencies
-  - composer install
+  - composer install --prefer-dist
   # Installing magento version with prepared DB dump
   - bin/mage-ci install $MAGE_DIR $MAGE magento -c -r http://mage-ci.ecomdev.org
   # Installing EcomDev_PHPUnit module
