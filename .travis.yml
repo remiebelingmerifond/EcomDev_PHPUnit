@@ -3,6 +3,11 @@ php:
   - 5.6
 env:
   - MAGE=1.9.0.1
+cache:
+  directories:
+    - "$HOME/.composer/cache"
+services:
+  - mysql
 before_script:
   - MAGE_DIR=tests/magento
   # Copying travis composer.json to test only module
